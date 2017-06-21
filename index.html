@@ -1,11 +1,11 @@
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
-   integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-   crossorigin=""/>
-
- <div id="mapid"></div>
-
-#mapid { height: 180px; }
-
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoieW9yZ29zc290aXJpYWRpcyIsImEiOiJjajN3eWt5aDEwMDAxMnFwYjRrbDBuOG12In0.C8xjd1GukUfRo5Z_5n3CZw';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9'
+});
+</script>
