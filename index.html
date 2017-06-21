@@ -48,18 +48,7 @@ var map = new mapboxgl.Map({
 
 var layerList = document.getElementById('menu');
 var inputs = layerList.getElementsByTagName('input');
-
-    /* Upload Latitude/Longitude markers from ctp_map.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
-   var customLayer = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-      layer.bindPopup(feature.properties.title);
-    }
-   });
-   var runLayer = omnivore.csv('ctp_map.csv', null, customLayer)
-   .on('ready', function() {
-    map.fitBounds(runLayer.getBounds());
-   }).addTo(map);
-      
+     
 function switchLayer(layer) {
     var layerId = layer.target.id;
     map.setStyle('mapbox://styles/mapbox/' + layerId + '-v9');
